@@ -322,7 +322,6 @@ i.fa-camera-retro {
      	border-bottom:none; 
 	}
 	.nav-tabs .nav-link{
-		display: block;
 		border-radius: 2px;
 		background-color: rgb(251, 251, 251);
 		box-shadow: 0px 0px 1px 0px rgba(20, 20, 21, 0.14);
@@ -330,13 +329,15 @@ i.fa-camera-retro {
 		height: 100px;
 		margin-bottom: 8px;	
 		padding: 0;
+		img{
+			width: 100%;
+		}
 	}	
 	.nav-tabs .nav-link.active{
 		border-radius: 2px;
-		  background-color: rgb(255, 255, 255);
-		 box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
 	}
-
 	.tab-content{
 		h4{
 			font-size: 30px;
@@ -361,6 +362,9 @@ i.fa-camera-retro {
 	  		border-radius: 27px;
 	  		border: solid 1px @base-grey;
 			box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
+		}
+		img{
+			width: 100%;
 		}
 	}
 }
@@ -653,72 +657,42 @@ i.fa-camera-retro {
  	.process-box{
  		margin-top: 50px;
  	}
- 	.services-list{
- 		text-align: center;
- 	}
- 	.services-list-item{
- 		display: inline-flex;
- 		width: 104px;
-    	height: 92px;
-    	margin-left: 8px;
- 	}
- 	.services-info{
- 		text-align: center;
- 		.img-resposive{
- 			margin-top: 50px;
- 		}
- 	}
- 	.team{
-	 	&-box{
-	 	}
- 	}
+ 	#services{
+		.nav-tabs {
+			display: inline-flex; 
+			justify-content: center;
+		}	
+		.tab-content{
+			text-align: center;
+			img{
+				margin-top: 6%;
+				width: 100%;
+			}
+		}
+	}
  }
  @media (min-width: 481px) and (max-width: 767px){
  	.process-box{
  		margin-top: 50px;
  	}
- 	.services-list{
- 		text-align: center;
- 	}
- 	.services-list-item{
- 		display: inline-flex;
- 		width: 104px;
-    	height: 92px;
-    	margin-left: 8px;
- 	}
- 	.services-info{
- 		text-align: center;
- 		.img-resposive{
- 			margin-top: 50px;
- 		}
- 	}
+ 	#services{
+		.nav-tabs {
+			display: inline-flex; 
+			justify-content: center;
+			width: 100%;
+		}
+		.tab-content{
+			text-align: center;
+			img{
+				margin-top: 6%;
+				width: 100%;
+			}
+		}
+	}
  }
  @media (min-width: 768px) and (max-width: 991px){
  	.process-box{
  		margin-top: 50px;
- 	}
- 	.services-list{
- 		text-align: center;
- 	}
- 	.services-list-item{
- 		display: inline-flex;
- 		width: 104px;
-    	height: 92px;
-    	margin-left: 8px;
- 	}
- 	.services-info{
- 		text-align: center;
- 		.img-resposive{
- 			margin-top: 50px;
- 		}
- 	}
-}
-@media (min-width: 992px) and (max-width: 1199px){
-	.services-info{
- 		text-align: center;
- 		.img-resposive{
- 			width: 330px;
- 		}
  	}
 }
 
