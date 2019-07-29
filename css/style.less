@@ -317,25 +317,27 @@ i.fa-camera-retro {
 		font-size: 16px;
 	}
 }
-.services{
-	&-list{
-		list-style: none;
-		&-item{
-			display: block;
-			border-radius: 2px;
-			background-color: rgb(251, 251, 251);
-			box-shadow: 0px 0px 1px 0px rgba(20, 20, 21, 0.14);
-			width: 104px;
-			height: 92px;
-			margin-bottom: 8px;
-		}
-		.active{
-			border-radius: 2px;
-		  	background-color: rgb(255, 255, 255);
-		 	box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
-		}
+#services{
+	.nav-tabs {
+     	border-bottom:none; 
 	}
-	&-info{
+	.nav-tabs .nav-link{
+		display: block;
+		border-radius: 2px;
+		background-color: rgb(251, 251, 251);
+		box-shadow: 0px 0px 1px 0px rgba(20, 20, 21, 0.14);
+		width: 104px;
+		height: 100px;
+		margin-bottom: 8px;	
+		padding: 0;
+	}	
+	.nav-tabs .nav-link.active{
+		border-radius: 2px;
+		  background-color: rgb(255, 255, 255);
+		 box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
+	}
+
+	.tab-content{
 		h4{
 			font-size: 30px;
 		}
