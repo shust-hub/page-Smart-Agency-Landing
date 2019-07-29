@@ -21,6 +21,7 @@
 @bg-koimona: #c049f8;
 @bg-koire: #817eff;
 @bg-lara: #f74770;
+
 body{
 	font-size: 14px;
 	.opn-reg;
@@ -45,7 +46,7 @@ a{
 	text-decoration: none;
 	border: none;
 	background: transparent;
-	color: #626262;
+	color: @base-text;
 }
 .section-header{
 	margin-bottom: 5%;
@@ -62,34 +63,34 @@ a{
 }
 .main {
 	&-head{
-		margin-top: 4%;
-	}
-	&-logo-border{
-	 	border-width: 3px;
-	 	border-color: #706b73;
-	 	border-style: solid;
-	 	width: 141.92px;
-	 	height: 47.92px;
-		text-align: center;
-		line-height: 42px;
-		#color-logo{
-			color: @base-red;
+		padding-top: 4%;
+		&-logo-border{
+		 	border-width: 3px;
+		 	border-color: @base-black;
+		 	border-style: solid;
+		 	width: 141.92px;
+		 	height: 47.92px;
+			text-align: center;
+			line-height: 42px;
+			#color-logo{
+				color: @base-red;
+			}
 		}
-	}
-	&-logo-border p{
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 600;
-		font-size: 36px;
-		color: #706b73;
-	}
-	&-nav{
-		height: 48px;
-		&-bar{
-			top: 50%;
-			margin-top: -12px;
-			width: 50px;
-			position: relative;
-			float:right;
+		&-logo-border p{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 600;
+			font-size: 36px;
+			color: @base-black;
+		}
+		&-nav{
+			height: 48px;
+			&-bar{
+				top: 50%;
+				margin-top: -12px;
+				width: 50px;
+				position: relative;
+				float:right;
+			}
 		}
 	}
 	&-text{
@@ -561,13 +562,16 @@ i.fa-camera-retro {
  	&-box{
 	 	display: -webkit-inline-flex;
 	 	display: inline-flex;
-	 	justify-content: space-between;	
+	 	justify-content: space-between;
 	 	.chb{
 	 		position: absolute;
 	 		top: 0;
 	 	}
 	 	.clr{
 	 		visibility: hidden;
+	 	}
+	 	.parthner{
+	 		padding: 0 2% 0 2%;
 	 	}
 	 	.parthner:hover .chb{
 	 		visibility: hidden;
@@ -576,7 +580,6 @@ i.fa-camera-retro {
 	 		visibility: visible;
 	 	}
  	}
-	
  }
  footer{
  	padding-top: 44px;
