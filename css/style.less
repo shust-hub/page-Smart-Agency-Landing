@@ -86,7 +86,6 @@ a{
 			height: 48px;
 			&-bar{
 				top: 50%;
-				margin-top: -12px;
 				width: 50px;
 				position: relative;
 				float:right;
@@ -370,6 +369,7 @@ i.fa-camera-retro {
 }
 #team{
 	background-color: @base-lightgrey;
+
 }
 .feedback{
 	&-box{
@@ -470,20 +470,29 @@ i.fa-camera-retro {
  .slick-dots li.slick-active button{
  	background-color: @base-red;
  }
- .team{
- 	&-box{
- 		overflow-x: hidden;
- 		max-height: 542px;
- 		max-width: 360px;
- 		.skills{
-	 			background-color: rgba(256, 256, 256, 0.8);
-	 			position: absolute;
-	 			top: 0;
-	 			padding-top: 178px;
-	 			width: 100%;
-	 			height: 443px;
-	 			max-width: 350px;
-	 			visibility: hidden;
+ #teamBox1{
+ 			background: url(../img/team/1.jpg) no-repeat center center;
+			background-size: cover;
+ 		}
+ #teamBox2{
+ 			background: url(../img/team/2.jpg) no-repeat center center;
+			background-size: cover;
+ 		}
+ #teamBox3{
+ 			background: url(../img/team/3.jpg) no-repeat center center;
+			background-size: cover;
+ 		}
+ #team-people{
+ 	.team-box{
+ 		min-height: 443px;
+ 		.photo{
+ 			min-height: 443px;
+ 			.skills{
+ 			width: 100%;
+ 			height: 443px;
+ 			background-color: rgba(256, 256, 256, 0.8);
+ 			padding-top: 40%;
+ 			visibility: hidden;
 	 			&-skill{
 	 				p{
 	 					font-size: 11px;
@@ -531,35 +540,33 @@ i.fa-camera-retro {
   					}
 	 			}
 	 		}
- 		.photo{
- 			.name{
- 				width: 263px;
- 				height: 96px;
- 				background-color: white;
- 				text-align: center;
- 				position: relative;
-				left: 50%;
-				margin-left: -124px;
-				top: -66px;
-				padding-top: 18px;
-				box-shadow: 0px 6px 16px 0px rgba(20, 20, 21, 0.08);
-				p{
-					span{
-						.opn-bold;
-						font-size: 30px;
-					}
-					.opn-light;
-				}
- 			}
  		}
-	}
-	&-box:hover .skills{
+ 		.team-name{
+ 			width: 90%;
+ 			height: 96px;
+ 			position: relative;
+ 			top: -48px;
+ 			background-color: white;
+ 			text-align: center;
+			box-shadow: 0px 6px 16px 0px rgba(20, 20, 21, 0.08);
+			p{
+				span{
+					.opn-bold;
+					font-size: 30px;
+				}
+				.opn-light;
+			}
+ 		}
+ 	}
+ 	.team-box:hover .skills{
 				visibility: visible;
-	 		}
-	&-box:hover .name{
+	}
+	.team-box:hover .team-name{
 				visibility: hidden;
-	 		}
+	}
 }
+
+
  .parthners{
  	background-color: @base-lightgrey;
  	padding-top: 78px;
@@ -657,6 +664,15 @@ i.fa-camera-retro {
  	.process-box{
  		margin-top: 50px;
  	}
+ 	 #team{
+	 	.team-box{
+	 		min-height: 443px;
+	 		margin-bottom: 6%;
+	 		.skills{
+	 			width: 100%;
+	 		}
+	 	}
+	}
  	#services{
 		.nav-tabs {
 			display: inline-flex; 
