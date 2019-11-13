@@ -22,6 +22,8 @@
 @bg-koire: #817eff;
 @bg-lara: #f74770;
 
+
+
 body{
 	font-size: 14px;
 	.opn-reg;
@@ -152,55 +154,56 @@ a{
 		}
 	}
 }
-.burger-line{
-	display: block;
-	width: 30px;
-	height: 4px;
-	right: 0;
-	top: 50%;
-	position: absolute;
-	background-color: @base-black;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-o-border-radius: 5px;
-	-ms-border-radius: 5px;
-	border-radius: 5px;
-	transform: translateY(-2px);
-	&:before{
-		transition: all 0.2s;
-		display: inline-block;
-		content: '';
-		position: absolute;
-		transform: translateY(-8px);
-		top: 50%;
-		width: 30px;
-		height: 4px;
-		background-color: @base-black;
-	}
-	&:after{
-		transition: all 0.2s;
-		display: inline-block;
-		content: '';
-		position: absolute;
-		transform: translateY(4px);
-		top: 50%;
-		width: 30px;
-		height: 4px;
-		background-color: @base-black;
-	}
-}
-.main-nav-bar:hover{
-	.burger-line{
-		height: 0;
-		&:before{
-			transform: rotate(-45deg);
-		}
-		&:after{
-			transform: rotate(45deg);
-		}
 
-	}
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+  width: 40px;
+  height: 3px;
 }
+
+.hamburger-menu {
+	position: relative;
+	transform: translateY(0px);
+	background: @base-black;
+	transition: all 0ms 300ms;
+  
+  &.animate {
+    background: rgba(255, 255, 255, 0); 
+  }
+}
+
+.hamburger-menu:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 8px;
+	background:@base-black;
+	transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), 
+	transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 8px;
+	background: @base-black;
+	transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:after {
+	top: 0;
+	transform: rotate(45deg);
+	transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:before {
+	top: 0;
+	transform: rotate(-45deg);
+	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 .process {
 	&-box{
 		color: @base-white;
@@ -515,16 +518,21 @@ i.fa-camera-retro {
 
  #team-people{
  	background-color: @base-lightgrey;
+
  	.team-box{
- 		min-height: 443px;
+ 		height: 443px;
+ 		width: 360px;
+ 		margin-bottom: 78px;
+
  		.photo{
- 			min-height: 443px;
+
  			.skills{
- 			width: 100%;
- 			height: 443px;
- 			background-color: rgba(256, 256, 256, 0.8);
- 			padding-top: 40%;
- 			visibility: hidden;
+	 			width: 100%;
+	 			height: 443px;
+	 			background-color: rgba(256, 256, 256, 0.8);
+	 			padding-top: 40%;
+	 			visibility: hidden;
+
 	 			&-skill{
 	 				p{
 	 					font-size: 11px;
@@ -581,6 +589,7 @@ i.fa-camera-retro {
  			background-color: white;
  			text-align: center;
 			box-shadow: 0px 6px 16px 0px rgba(20, 20, 21, 0.08);
+
 			p{
 				span{
 					.opn-bold;
@@ -603,7 +612,7 @@ i.fa-camera-retro {
  	background-color: @base-lightgrey;
  	padding-top: 78px;
  	padding-bottom: 78px;
- 	overflow-x: hidden;
+ 	overflow-x: scroll;
  	&-box{
 	 	display: -webkit-inline-flex;
 	 	display: inline-flex;
@@ -741,9 +750,6 @@ i.fa-camera-retro {
 			}
 		}
 	}
-	#parth-double{
-		visibility: hidden;
-	}
 	footer{
 		.buttons{
 			text-align: center;
@@ -771,9 +777,6 @@ i.fa-camera-retro {
 				width: 100%;
 			}
 		}
-	}
-	#parth-double{
-		visibility: hidden;
 	}
 	footer{
 		.buttons{

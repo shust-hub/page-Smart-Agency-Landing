@@ -47,4 +47,9 @@ $(document).ready(function(){
 			alert('Вы не заполнили ИМЯ');
 		}
 	})
+
+	$('.main-head-nav').on('click', function() {
+		$('.hamburger-menu').toggleClass('animate');
+	})
+
 });
