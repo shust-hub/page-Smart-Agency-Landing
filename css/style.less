@@ -607,17 +607,29 @@ i.fa-camera-retro {
 	}
 }
 
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
+html {
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+}
 
  .parthners{
  	background-color: @base-lightgrey;
  	padding-top: 78px;
  	padding-bottom: 78px;
- 	overflow-x: scroll;
+ 	overflow-x: hidden;
+ 	
+
  	&-box{
 	 	display: -webkit-inline-flex;
 	 	display: inline-flex;
 	 	justify-content: space-between;
-
+	 	overflow-x: scroll;
+	 	
 	 	.clr{
 
 	 		filter: grayscale(100%);
