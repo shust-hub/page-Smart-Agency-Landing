@@ -131,8 +131,16 @@ a{
 			font-size: 16px;
 			border-radius: 50px;
 			 box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+			 transition: all 0.2s;
+			 cursor: pointer;
 			.span {
 				font-size: 28px;
+			}
+
+			&:hover{
+			background-color: @base-white;
+			color:@base-red;
+			box-shadow: 0px 0px 23px 0px rgba(20, 20, 21, 0.29);
 			}
 		}
 		input, textarea{
@@ -229,6 +237,7 @@ a{
 			border-radius: 27px;
 	  		background-color: rgb(255, 255, 255);
 	  		box-shadow: 0px 0px 14px 0px rgba(20, 20, 21, 0.05);
+	  		cursor: pointer;
 		}	
 	&:hover {
   		box-shadow: 0px 0px 35px 0px rgba(20, 20, 21, 0.2);
@@ -309,11 +318,24 @@ i.fa-camera-retro {
 		font-size: 22px;
 	}
 	button {
-		border: none;
-		padding: 15px 35px;
-		border-radius: 50px;
-		background-color: @base-red;
-		font-size: 16px;
+			background-color:@base-red;
+			border: none;
+			padding:15px 35px;
+			color: @base-white;
+			display: block;
+			margin: 0 auto;
+			margin-top: 15px;
+			font-size: 16px;
+			border-radius: 50px;
+			 box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+			 transition: all 0.2s;
+			 cursor: pointer;
+
+			&:hover{
+			background-color: @base-white;
+			color: black;
+			box-shadow: 0px 0px 23px 0px rgba(20, 20, 21, 0.29);
+			}
 	}
 }
 #services{
@@ -352,7 +374,7 @@ i.fa-camera-retro {
 		p{
 			font-size: 16px;
 		}
-		button{
+		.KnowMore{
 			color: @base-black;
 			padding: 15px 55px;
 			margin-top: 30px;
@@ -361,6 +383,14 @@ i.fa-camera-retro {
 	  		border-radius: 27px;
 	  		border: solid 1px @base-grey;
 			box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
+			cursor: pointer;
+			transition: all 0.2s;
+			&:hover {
+				background-color: @base-red;
+				color: @base-white;
+				border: solid 1px @base-red;
+				box-shadow: 0px 0px 23px 0px rgba(20, 20, 21, 0.29);
+			}
 		}
 		img{
 			width: 100%;
@@ -482,7 +512,9 @@ i.fa-camera-retro {
  			background: url(../img/team/3.jpg) no-repeat center center;
 			background-size: cover;
  		}
+
  #team-people{
+ 	background-color: @base-lightgrey;
  	.team-box{
  		min-height: 443px;
  		.photo{
@@ -559,10 +591,10 @@ i.fa-camera-retro {
  		}
  	}
  	.team-box:hover .skills{
-				visibility: visible;
+		visibility: visible;
 	}
 	.team-box:hover .team-name{
-				visibility: hidden;
+		visibility: hidden;
 	}
 }
 
@@ -576,24 +608,33 @@ i.fa-camera-retro {
 	 	display: -webkit-inline-flex;
 	 	display: inline-flex;
 	 	justify-content: space-between;
-	 	.chb{
-	 		position: absolute;
-	 		top: 0;
-	 	}
+
 	 	.clr{
-	 		visibility: hidden;
+
+	 		filter: grayscale(100%);
+		    -webkit-filter: grayscale(100%);
+		    -moz-filter: grayscale(100%);
+		    -ms-filter: grayscale(100%);
+		    -o-filter: grayscale(100%);
+		    filter: url(desaturate.svg#greyscale);
+		    filter: gray;
+		    -webkit-filter: grayscale(1);
+		    opacity: 0.4;
+		    transition: all 0.2s;
 	 	}
 	 	.parthner{
 	 		padding: 0 2% 0 2%;
-	 	}
-	 	.parthner:hover .chb{
-	 		visibility: hidden;
+	 		position: relative;
 	 	}
 	 	.parthner:hover .clr{
-	 		visibility: visible;
+	 		filter: none;
+	 		opacity: 1;
+
+
 	 	}
  	}
  }
+
  footer{
  	padding-top: 44px;
  	padding-bottom: 54px;
@@ -606,6 +647,14 @@ i.fa-camera-retro {
  		border-radius: 27px;
 		box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
 		margin-bottom: 54px;
+		transition: all 0.2s;
+		cursor: pointer;
+		&:hover {
+			background-color: @base-red;
+			color: @base-white;
+			border: solid 1px @base-red;
+			box-shadow: 0px 0px 23px 0px rgba(20, 20, 21, 0.29);
+		}
  	}
  	.buttons{
  		text-align: right;
@@ -628,6 +677,9 @@ i.fa-camera-retro {
 	 	}
  	}
  }
+
+
+
  .overlay-nav{
  	left: 0;
  	top: 0;
@@ -658,11 +710,11 @@ i.fa-camera-retro {
  		top: 5%;
  		right: 5%;
  		font-size: 50px;
-		&:hover{
-			cursor: pointer;
-		}
+		cursor: pointer;
  	}
  }
+
+
  @media (min-width: 0) and (max-width: 480px){
  	.process-box{
  		margin-top: 50px;
